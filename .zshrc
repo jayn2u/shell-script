@@ -104,9 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 alias zshsource="source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Replace default ls with eza
 alias ls='eza'
@@ -128,9 +128,12 @@ alias lh='eza -lh --icons'     # Human-readable file sizes
 alias nv='nvim'              # Even shorter command
 alias n='nvim'              # Even shorter command
 
-alias c='clear'             # Clear the terminal
-alias h='history'           # Show history
+alias cl='clear'             # Clear the terminal
+alias hi='history'           # Show history
 alias gs='git status'       # Git status
+
+# Mac에 설치된 java 버전을 확인
+alias javalist='/usr/libexec/java_home -V'
 
 # vi mode
 bindkey -v
@@ -146,3 +149,16 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Activate autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Java env 설정
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(~/.local/bin/mise activate zsh)"
+
+# Azure CLI
+autoload bashcompinit && bashcompinit
+source $(brew --prefix)/etc/bash_completion.d/az
