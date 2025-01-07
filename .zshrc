@@ -159,6 +159,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 eval "$(~/.local/bin/mise activate zsh)"
 
-# Azure CLI
-autoload bashcompinit && bashcompinit
-source $(brew --prefix)/etc/bash_completion.d/az
+# MySQL 8.4
+export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
