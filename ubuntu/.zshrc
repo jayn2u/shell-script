@@ -122,3 +122,7 @@ alias lT='eza --tree -a'  # Tree view with all files
 alias lS='eza -l --sort=size' # Sort by file size
 alias lD='eza -l --sort=date' # Sort by modification date
 alias lx='eza -l --icons'     # Long format with icons (if supported)
+
+# Shorcuts
+alias gs='git status'
+alias cl='clear'
