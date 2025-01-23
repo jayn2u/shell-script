@@ -135,6 +135,9 @@ alias gs='git status'       # Git status
 # Mac에 설치된 java 버전을 확인
 alias javalist='/usr/libexec/java_home -V'
 
+# Swiftformat
+alias format='swiftformat .'
+
 # vi mode
 bindkey -v
 
@@ -157,6 +160,8 @@ eval "$(jenv init -)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Mise
 eval "$(~/.local/bin/mise activate zsh)"
 
 # MySQL 8.4
