@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Zsh-syntax-highlighting
